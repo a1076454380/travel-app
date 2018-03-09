@@ -1,0 +1,312 @@
+/* html的font-size是100px,
+ 所有 1rem就是100px .1rem就是10px */
+/*适用于手机端：字体大小用rem，1rem=16px；为默认字体大小;最大宽度640*/
+header{height:.84rem;background:#fff;width:100%;}
+header a.first,
+header a.msg{width: 10%;height: 100%;}
+header a.first{
+    background: url(../images/left_jiantou1.png) no-repeat center;
+    background-size: auto 40%;
+}
+header a.msg{
+    background: url(../images/msg1.png) no-repeat center;
+    background-size: auto 50%;
+    position: relative;
+}
+header .msg b{
+    position: absolute;
+    top: .15rem;
+    right: .05rem;
+    height: .16rem;
+    width: .16rem;
+    background: #000;
+    color: #2DBB55;
+    color: #000;
+    font-size: .12rem;
+    border-radius: 50%;
+    line-height: .2rem;
+    overflow: hidden;
+}
+header .second{
+    width: 80%;
+    height: 100%;
+    font-size: .36rem;
+    color: #051B28;
+    text-align: center;
+    line-height: .84rem;
+}
+/*导航*/
+div.nav{height: .75rem;margin-bottom: .2rem;width: 100%;}
+nav{
+    height: .75rem;
+    line-height: .75rem;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #e9eaea;
+    border-bottom: 1px solid #e9eaea;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 6.4rem;
+    z-index: 1;
+}
+nav a{
+    width: 25%;
+    height: .72rem;
+    color: #343434;
+    font-size: .25rem;
+    position: relative;
+    border-bottom: .03rem solid transparent;
+}
+nav a.navIndex{
+    color: #2DBB55;
+    border-bottom-color: #2DBB55;
+}
+/*详细内容*/
+section.main{
+    width: 6.4rem;
+    margin: 0 auto;
+    background: #f0f4fb;
+    margin-bottom: .8rem;
+}
+
+.main .title{
+    width: 5rem;
+    height: .7rem;
+    line-height: .7rem;
+    padding-left: .2rem;
+    font-size: .32rem;
+    color: #474747;
+    position: relative;
+}
+.main .title:before{
+    content: '';
+    position: absolute;
+    top: .2rem;
+    left: 0rem;
+    height: .3rem;
+    width: 5px;
+    background: #2DBB55;
+}
+.main .s_title{
+    width: 5rem;
+    padding-left: .2rem;
+    font-size: .3rem;
+    color: #262626;
+    height: .5rem;
+    line-height: .5rem;
+    position: relative;
+}
+.main .s_title:before{
+    content: '';
+    position: absolute;
+    top: .2rem;
+    left: 0;
+    height: .1rem;
+    width: .1rem;
+    border-radius: 50%;
+    background: #2DBB55;
+}
+.main .txt{
+    font-size: .24rem;
+    color: #999;
+    padding: .1rem 0;
+    line-height: .4rem;
+}
+
+/*确认订单*/
+.main section.minH{
+    margin-bottom: .2rem; 
+    width: 6rem;
+    padding:0 .2rem;
+}
+.queren .man,
+.queren .child{
+    width: 50%;
+    height: 1.2rem;
+}
+.queren .one{
+    font-size: .24rem;
+    color: #999;
+    line-height: .4rem;
+    height: .4rem;
+    margin-bottom: .1rem;
+}
+.queren .price{
+    color: #FD8800;
+    font-size: .19rem;
+}
+.queren .jia,
+.queren .jian{
+    display: block;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 5px;
+    float: left;
+    background:#ececee url(../images/jia.png) no-repeat center;
+    background-size: 40%;
+}
+.queren .jian{
+    margin-left: .5rem;
+    background:#ececee url(../images/jian.png) no-repeat center;
+    background-size: 40%;
+}
+.queren .num{
+    width: .5rem;
+    height: .5rem;
+    text-align: center;
+    font-size: .24rem;
+    color: #222;
+    margin: 0 .1rem;
+}
+
+/*联系人信息*/
+.main section.lianxi{
+    width: 6.4rem;
+    padding: 0;
+}
+.main .lianxi .title{
+   margin-left: .2rem;
+}
+.lianxi .phone,
+.lianxi .name{
+    height: .8rem;
+    line-height: .8rem;
+    border-bottom: 1px solid #f9f9f9;
+    width: 5.6rem;
+    padding-left: .6rem;
+    font-size: .26rem;
+    color: #999;
+    background: url(../images/name.png) no-repeat .2rem;
+    background-size: auto 40%;
+}
+.lianxi .phone{
+    background: url(../images/dd_phone.png) no-repeat .2rem;
+    background-size: auto 40%;
+}
+.lianxi .phone_a,
+.lianxi .name_a{
+    font-size: .26rem;
+    width: 5rem;
+    color: #999;
+}
+/*游客信息*/
+.youke .s_title{
+    margin-left: .2rem;
+}
+.youke .first{
+    margin-top: .4rem;
+}
+.lianxi .name {
+    position: relative;
+}
+.lianxi .name .zheng{
+    position: absolute;
+    top: .15rem;
+    right: 0;
+    width: 2rem;
+    height: .5rem;
+    border:none;
+    outline: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: #C6C6C6;
+    color: #fff;
+    padding-left: .2rem;
+    border-radius: .25rem;
+}
+.lianxi .name p{
+    position: absolute;
+    top:.2rem;
+    right: .1rem;
+    height: .4rem;
+    width: .4rem;
+    background: #fff url(../images/xia.png) no-repeat center;
+    border-radius: 50%;
+}
+.zheng option{
+    width: 1.5rem;
+    padding:0;
+}
+
+.youke_b{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+/*座位选择*/
+.zw_m{
+    min-height: 10rem;
+    padding-bottom: .2rem;
+}
+.zw_m_l{width: 4rem;}
+.zw_m_l .zuo{
+    width: 2rem;
+    height: 6.75rem;
+    padding-top: 1.25rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    background: url(../images/kuangjia.png) no-repeat center top;
+    background-size: auto 100%;
+}
+.zw_m_l .zuo img{
+    width: .4rem;
+    float: left;
+    margin-top: .07rem;
+}
+.zw_m_l .zuo img:nth-child(odd){
+    margin-right: .05rem;
+}
+.zuo b{display: none;}
+.zuo tr{height: .51rem;}
+.zw_m_l .zuo td:nth-child(3){
+    width: .3rem;
+}
+.zw_m_l .lie{
+    margin-top: 1.2rem;
+    margin-left: .5rem;
+    width: .3rem;
+    height: 6.4rem;
+    padding:.2rem 0;
+    background: #969696;
+    color: #fff;
+    font-size: .17rem;
+    text-align: center;
+    line-height: .54rem;
+    border-radius: .15rem;
+}
+.zw_m_r{
+    width: 2rem;
+    height: 100%;
+}
+.zw_m_r p{
+    height: 1rem;
+    line-height: 1rem;
+    width: 1.5rem;
+    padding-left: .5rem;
+    font-size: .3rem;
+    color: #262626;
+}
+.zw_m_r .kx{margin-top: 1rem;;background:url(../images/kexuan.png) no-repeat left;background-size: auto 30%;}
+.zw_m_r .yx{background:url(../images/yixuan.png) no-repeat left;background-size: auto 30%;}
+.zw_m_r .ys{background:url(../images/yishou.png) no-repeat left;background-size: auto 30%;}
+/*立即支付*/
+input.zhifu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 6.4rem;
+    margin: 0 auto;
+    height: .8rem;
+    line-height: .8rem;
+    background: #FF7733;
+    font-size: .36rem;
+    text-align: center;
+    color: #fff;
+}

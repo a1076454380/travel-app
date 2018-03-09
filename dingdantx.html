@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>客服</title>
+    <link rel="stylesheet" href="css/header-foter.css">
+    <link rel="stylesheet" href="css/dingdantx.css">
+    <link rel="stylesheet" href="css/calendar-pro.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- 控制font-size大小 -->
+    <script src="js/important.js"></script>
+    <script src="js/calendar-pro.js"></script>
+    <script>
+    $(function() {
+        $('.youke_b').click(function() {
+            var fDisplay = $('.aa').css('display');
+            if (fDisplay == 'block') {
+                $('.aa').slideUp();
+                $(this).find('img').css('transform', 'rotate(180deg)');
+            } else {
+                $('.aa').slideDown();
+                $(this).find('img').css('transform', 'rotate(0deg)');
+            }
+        })
+        // 选择大巴座位 
+        $('.zuo img').click(function() {
+            var bVal = $(this).siblings('b').text();
+            // 如果是1，说明已经被选择，不可以选
+            if (bVal == 1) {
+                alert('请更换座位！');
+            }
+            // 如果是0，说明还没没有选择，可以选
+            if (bVal == 0) {
+                $(this).attr('src', 'images/yixuan.png');
+                var trVal = $(this).parents('tr').index() + 1;
+                var tdVal = $(this).parents('td').index();
+                if (tdVal == 0) {
+                    tdVal = "A";
+                } else if (tdVal == 1) {
+                    tdVal = 'B';
+                } else if (tdVal == 3) {
+                    tdVal = 'C';
+                } else if (tdVal == 4) {
+                    tdVal = 'D';
+                }
+                alert(trVal + tdVal);
+            }
+        });
+        $('.jia').click(function() {
+            var nVal = $(this).siblings('.num');
+            nVal.val(parseInt(nVal.val()) + 1);
+        });
+        $('.jian').click(function() {
+            var nVal = $(this).siblings('.num');
+            nVal.val(parseInt(nVal.val()) - 1);
+            if (nVal.val() < 1) {
+                nVal.val(1);
+                alert('亲，最少一个人出游！');
+            }
+        });
+        // 确认订单
+        var spTop = $('.qr').offset().top;
+        var xqHeight = $('nav').height();
+        var a = spTop - xqHeight;
+        $('.nav1').click(function() {
+            $('body,html').animate({
+                'scrollTop': a,
+            }, 400)
+        })
+        // 联系人信息
+        var xqTop = $('.lx').offset().top;
+        var b = xqTop - xqHeight;
+        $('.nav2').click(function() {
+            $('body,html').animate({
+                'scrollTop': b,
+            }, 400)
+        })
+        // 游客信息
+        var pjTop = $('.yk').offset().top;
+        var c = pjTop - xqHeight;
+        $('.nav3').click(function() {
+            $('body,html').animate({
+                'scrollTop': c,
+            }, 400)
+        });
+        // 座位选择
+        var pTop = $('.zw').offset().top;
+        var d = pTop - xqHeight;
+        $('.nav4').click(function() {
+            $('body,html').animate({
+                'scrollTop': d,
+            }, 400)
+        })
+        // 获取导航距离顶部的距离
+        var contTop = $('nav').offset().top;
+        $(document).scroll(function() {
+            var dT = $(document).scrollTop();
+            if (dT >= contTop) {
+                $('nav').css('position', 'fixed');
+            } else {
+                $('nav').css('position', 'static');
+            }
+        })
+        // 滚动条滚动
+        $(document).scroll(function() {
+            // 确认订单
+            var dT = $(document).scrollTop();
+            var spTop = $('.qr').offset().top - $('nav').height();
+            if (dT > spTop) {
+                $('nav').find('a').removeClass('navIndex')
+                $('nav').find('.nav1').addClass('navIndex');
+            } else if (dT <= spTop) {
+                $('nav').find('a').removeClass('navIndex');
+            }
+            // 联系人信息
+            var xqTop = ($('.lx').offset().top) - $('nav').height() * 1.1;
+            if (dT > xqTop) {
+                $('nav').find('a').removeClass('navIndex')
+                $('nav').find('.nav2').addClass('navIndex');
+            }
+            // 游客信息
+            var pjTop = $('.yk').offset().top - $('nav').height() * 1.1;
+            if (dT > pjTop) {
+                $('nav').find('a').removeClass('navIndex')
+                $('nav').find('.nav3').addClass('navIndex');
+            }
+            // 座位选择
+            var pTop = $('.zw').offset().top - $('nav').height() * 1.1;
+            if (dT > pTop) {
+                $('nav').find('a').removeClass('navIndex')
+                $('nav').find('.nav4').addClass('navIndex');
+            }
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a class="fl db first" href="#"></a>
+            <span class="fl db second" href="#">订单填写</span>
+            <a class="fr db msg" href="#"><b>10</b></a>
+        </header>
+        <!-- 导航 -->
+        <div class="nav">
+            <nav>
+                <a href="javascript:void(0)" class="nav1 db fl">确认订单</a>
+                <a href="javascript:void(0)" class="nav2 db fl">联系人信息</a>
+                <a href="javascript:void(0)" class="nav3 db fl">游客信息</a>
+                <a href="javascript:void(0)" class="nav4 db fl">座位选择</a>
+            </nav>
+        </div>
+        <!-- 详细内容 -->
+        <section class="main minH">
+            <form>
+                <!-- 确认订单 -->
+                <section class="queren qr minH">
+                    <div class="title">确认订单</div>
+                    <div class="s_title">商品名称</div>
+                    <div class="txt">东极岛三日游>毕业季，致青春，寻找中国最东边的那一抹蓝， 全国高铁到宁波，8人成团。 </div>
+                    <div class="s_title">出游日期</div>
+                    <div class="">
+                        <!-- 容器布局 -->
+                        <div class="calendar-box demo-box"></div>
+                        <!-- 获取选中的日期与值 -->
+                        <button onclick="getActive()" class="hide">获取选中日期值</button>
+                    </div>
+                    <div class="s_title">出游人数</div>
+                    <div class="man fl">
+                        <p class="one">成人 <span class="price">&yen;<b class="">2350</b></span></p>
+                        <span class="jian"></span>
+                        <input type="text" class="num fl" value="1">
+                        <span class="jia"></span>
+                    </div>
+                    <div class="child fl">
+                        <p class="one">儿童 <span class="price">&yen;<b class="">2350</b></span></p>
+                        <span class="jian"></span>
+                        <input type="text" class="num fl" value="1">
+                        <span class="jia"></span>
+                    </div>
+                </section>
+                <!-- 联系人信息 -->
+                <section class="lianxi lx minH">
+                    <div class="title">联系人信息</div>
+                    <div class="phone">
+                        <input type="text" name="" class="phone_a" placeholder="手机号">
+                    </div>
+                    <div class="name">
+                        <input type="text" name="" class="name_a" placeholder="姓名">
+                    </div>
+                </section>
+                <!-- 游客信息 -->
+                <section class="lianxi yk youke minH">
+                    <div class="title">游客信息</div>
+                    <div class="first aa minH">
+                        <div class="s_title">第一位</div>
+                        <div class="phone">
+                            <input type="text" name="" class="phone_a" placeholder="手机号">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="姓名">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="证件号">
+                            <select class="zheng">
+                                <option value="">证件类型1</option>
+                                <option value="">证件类型2</option>
+                                <option value="">证件类型3</option>
+                                <option value="">证件类型4</option>
+                            </select>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="first aa minH">
+                        <div class="s_title">第二位</div>
+                        <div class="phone">
+                            <input type="text" name="" class="phone_a" placeholder="手机号">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="姓名">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="证件号">
+                            <select class="zheng">
+                                <option value="">证件类型1</option>
+                                <option value="">证件类型2</option>
+                                <option value="">证件类型3</option>
+                                <option value="">证件类型4</option>
+                            </select>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="first aa minH">
+                        <div class="s_title">第三位</div>
+                        <div class="phone">
+                            <input type="text" name="" class="phone_a" placeholder="手机号">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="姓名">
+                        </div>
+                        <div class="name">
+                            <input type="text" name="" class="name_a" placeholder="证件号">
+                            <select class="zheng">
+                                <option value="">证件类型1</option>
+                                <option value="">证件类型2</option>
+                                <option value="">证件类型3</option>
+                                <option value="">证件类型4</option>
+                            </select>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="youke_b"><img src="images/dd_top.png" alt=""></div>
+                </section>
+                <!-- 座位选择 -->
+                <section class="zuowei zw minH">
+                    <div class="title">座位选择</div>
+                    <div class="zw_m minH">
+                        <div class="zw_m_l fl">
+                            <div class="lie fl">
+                                <p>1</p>
+                                <p>2</p>
+                                <p>3</p>
+                                <p>4</p>
+                                <p>5</p>
+                                <p>6</p>
+                                <p>7</p>
+                                <p>8</p>
+                                <p>9</p>
+                                <p>10</p>
+                                <p>11</p>
+                                <p>12</p>
+                            </div>
+                            <div class="zuo fr">
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/yishou.png" alt=""><b>1</b></td>
+                                        <td><img src="images/yishou.png" alt=""><b>1</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/yishou.png" alt=""><b>1</b></td>
+                                        <td><img src="images/yishou.png" alt=""><b>1</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                        <td><img src="images/kexuan.png" alt=""><b>0</b></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="zw_m_r fr">
+                            <p class="kx">可选座位</p>
+                            <p class="yx">已选座位</p>
+                            <p class="ys">已售座位</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- 立即支付 -->
+                <input type="submit" value="立即支付" class="zhifu">
+            </form>
+        </section>
+        <!-- 返回顶部 -->
+        <section class="return_top"><img src="images/return_top.png"></section>
+    </div>
+</body>
+
+</html>
+<!-- 日历插件 -->
+<script>
+$('.calendar-box').calendar({
+    ele: '.demo-box', //依附
+    title: '选择预约时间',
+    //          beginDate : '2017-10-07',
+    //          endDate : '2017-12-04',
+    data: [
+        { date: '2017-10-07', data: '109' },
+        { date: '2017-10-08', data: '108' },
+        { date: '2017-10-09', data: '109' },
+        { date: '2017-10-10', data: '110' },
+        { date: '2017-10-11', data: '111' },
+        { date: '2017-10-12', data: '112' },
+        { date: '2017-10-13', data: '113' },
+        { date: '2017-10-14', data: '114' },
+        { date: '2017-10-15', data: '115' },
+        { date: '2017-10-16', data: '116' },
+        { date: '2017-10-17', data: '117' },
+        { date: '2017-10-18', data: '118' },
+        { date: '2017-10-19', data: '119' },
+        { date: '2017-10-20', data: '120' },
+        { date: '2017-10-21', data: '121' },
+        { date: '2017-10-22', data: '122' },
+        { date: '2017-10-23', data: '123' },
+        { date: '2017-10-24', data: '124' },
+        { date: '2017-10-25', data: '125' },
+        { date: '2017-10-26', data: '126' },
+        { date: '2017-10-27', data: '127' },
+        { date: '2017-10-28', data: '128' },
+        { date: '2017-10-29', data: '129' },
+        { date: '2017-10-30', data: '130' },
+        { date: '2017-10-31', data: '131' },
+        { date: '2017-11-01', data: '101' },
+        { date: '2017-11-02', data: '102' },
+        { date: '2017-11-03', data: '103' },
+        { date: '2017-11-04', data: '104' },
+        { date: '2017-11-05', data: '105' },
+        { date: '2017-11-06', data: '106' },
+        { date: '2017-11-07', data: '107' },
+        { date: '2017-11-08', data: '108' },
+        { date: '2017-11-09', data: '109' },
+        { date: '2017-11-10', data: '110' },
+        { date: '2017-11-11', data: '111' },
+        { date: '2017-11-12', data: '112' },
+        { date: '2017-11-13', data: '113' },
+        { date: '2017-11-14', data: '114' },
+        { date: '2017-11-15', data: '115' },
+        { date: '2017-11-16', data: '116' },
+        { date: '2017-11-17', data: '117' },
+        { date: '2017-11-18', data: '118' },
+        { date: '2017-11-19', data: '119' },
+        { date: '2017-11-20', data: '120' },
+        { date: '2017-11-21', data: '121' },
+        { date: '2017-11-22', data: '122' },
+        { date: '2017-11-23', data: '123' },
+        { date: '2017-11-24', data: '124' },
+        { date: '2017-11-25', data: '125' },
+        { date: '2017-11-26', data: '126' },
+        { date: '2017-11-27', data: '127' },
+        { date: '2017-11-28', data: '128' },
+        { date: '2017-11-29', data: '129' },
+        { date: '2017-11-30', data: '130' },
+        { date: '2017-12-01', data: '121' },
+        { date: '2017-12-02', data: '122' },
+        { date: '2017-12-03', data: '123' },
+        { date: '2017-12-04', data: '124' },
+    ]
+});
+
+function getActive() {
+    var data = $('.calendar-box').calendarGetActive();
+    console.log(data);
+    alert(data.date + "--¥" + data.money);
+}
+</script>

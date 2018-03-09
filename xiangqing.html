@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>详情</title>
+    <link rel="stylesheet" href="css/header-foter.css">
+    <link rel="stylesheet" href="css/xiangqing.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- 控制font-size大小 -->
+    <script src="js/important.js"></script>
+    <script src="js/swiper-3.4.1.min.js"></script>
+    <script>
+    $(function() {
+        // 产品介绍
+        var spTop = $('.cp').offset().top;
+        var xqHeight = $('.staticH').height();
+        var a = spTop - xqHeight;
+        $('.cpjs').click(function() {
+            $('body,html').animate({
+                'scrollTop': a,
+            }, 400)
+        })
+        // 费用说明
+        var xqTop = $('.fy').offset().top;
+        var b = xqTop - xqHeight;
+        $('.fysm').click(function() {
+            $('body,html').animate({
+                'scrollTop': b,
+            }, 400)
+        })
+        // 用户点评
+        var pjTop = $('.yh').offset().top;
+        var c = pjTop - xqHeight;
+        $('.yhdp').click(function() {
+            $('body,html').animate({
+                'scrollTop': c,
+                // 'scrollTop':pjTop,
+            }, 400)
+        })
+        // 获取详情标题距离顶部的距离
+        var contTop = $('.cont_t').offset().top;
+        $(document).scroll(function() {
+            var dT = $(document).scrollTop();
+            if (dT >= contTop) {
+                $('.cont_t').css('position', 'fixed');
+            } else {
+                $('.cont_t').css('position', 'static');
+            }
+        })
+        // 滚动条滚动
+        $(document).scroll(function() {
+            // 产品介绍
+            var dT = $(document).scrollTop();
+            var spTop = $('.cp').offset().top - $('.staticH').height();
+            if (dT > spTop) {
+                $('.cont_t').find('p').removeClass('pIndex')
+                $('.cont_t').find('.cpjs').addClass('pIndex');
+            }
+            // 费用说明
+            var xqTop = ($('.fy').offset().top) - $('.staticH').height() * 1.1;
+            if (dT > xqTop) {
+                $('.cont_t').find('p').removeClass('pIndex')
+                $('.cont_t').find('.fysm').addClass('pIndex');
+            }
+            // 用户点评
+            var pjTop = $('.yh').offset().top - $('.staticH').height() * 1.1;
+            if (dT > pjTop) {
+                $('.cont_t').find('p').removeClass('pIndex')
+                $('.cont_t').find('.yhdp').addClass('pIndex');
+            }
+        });
+        // 收藏取消收藏
+        var bool = false;
+        $('.footer .three').click(function() {
+            if (bool == false) {
+                $(this).find('.t_img').attr('src', 'images/sc.png');
+                $(this).find('span').text('已收藏');
+                bool = true;
+            } else if (bool == true) {
+                $(this).find('.t_img').attr('src', 'images/xq_sc.png');
+                $(this).find('span').text('收藏');
+                bool = false;
+            }
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a class="fl db first" href="index.html"><img src="images/left_jiantou.png"></a>
+            <a class="fr db msg" href="#"><img src="images/msg.png"><b>1</b></a>
+            <a class="fr db fx" href="#"><img src="images/xq_h2.png"></a>
+        </header>
+        <!-- 轮播 -->
+        <section class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="images/xq_logo.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/xq_logo.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/xq_logo.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/xq_logo.png"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="images/xq_logo.png"></a></div>
+                </div>
+                <div class="swiper-pagination">
+                </div>
+            </div>
+        </section>
+        <!-- 商品价格 -->
+        <section class="price">
+            <a href="#" class=" db title fl double">东极岛休闲2日游>毕业季，致青春，寻找中 国东边的那一抹蓝，感受海边慢生活，初遇东极， 后会无期</a>
+            <span class="three color1 db fl">下单立减</span>
+            <span class="three color2 db fl">酒店可选</span>
+            <span class="four db fl fc">&yen; <b class="price">3233</b> 起</span>
+            <a href="#" class="sm fl">价格说明</a>
+            <a href="#" class="five db fc">上航假期</a>
+        </section>
+        <!-- 规格 -->
+        <section class="guige">
+            <a href="#" class="db">选择：套餐类型/日期/出游人群 </a>
+        </section>
+        <!-- 详情 -->
+        <section class="cont">
+            <!-- 详情标题 -->
+            <div class="staticH" style="height: .9rem;">
+                <div class="cont_t">
+                    <p class="fl pIndex cpjs">产品介绍</p>
+                    <p class="fl fysm">费用说明</p>
+                    <p class="fl yhdp">用户点评</p>
+                </div>
+            </div>
+            <!-- 详情内容 -->
+            <div class="cont_m">
+                <!-- 产品介绍 -->
+                <div class="cp l1">
+                    <div class="title cpbt">产品介绍</div>
+                    <div class="small">产品特色</div>
+                    <div class="main">庙子湖岛是东极岛的主岛，也是唯一一个能乘船直达的岛屿， 同时，是电影《后会无期》的主要拍摄地。 这里有奇峰异石、观海垂钓、捕鱼</div>
+                    <div class="small">行程推荐</div>
+                    <ul class="tuijian">
+                        <li>
+                            <div class="tj_title"><span class="d1">D1</span><span class="d2">第1天 全国各地 - 宁波</span></div>
+                            <div class="main">每周二、四、六全国各地出发，自选高铁班次赴宁波市，后 自行前往酒店入住或自由活动。当天车费自理、住宿自理、 餐饮自理。早上起床前往后山东翔亭观中国第一缕曙光，赏东翔潮水， 远眺海天一色，早餐后观光车环岛游东海第一哨、战士第二 故乡、海疆卫士门、</div>
+                        </li>
+                        <li>
+                            <div class="tj_title"><span class="d1">D2</span><span class="d2">第2天 宁波  东极岛</span></div>
+                            <div class="main">6:00江东体育馆集合准时，过舟山跨海大桥，车赴沈家门半 升洞码头。乘东极轮赴东极镇人民政府所在地庙子湖，将行 李带至旅馆稍做早上起床前往后山东翔亭观中国第一缕曙光，赏东翔潮水， 远眺海天一色，早餐后观光车环岛游东海第一哨、战士第二 故乡、海疆卫士门、</div>
+                        </li>
+                        <li>
+                            <div class="tj_title"><span class="d1">D3</span><span class="d2">第3天 东极岛  宁波</span></div>
+                            <div class="main">早上起床前往后山东翔亭观中国第一缕曙光，赏东翔潮水， 远眺海天一色，早餐后观光车环岛游东海第一哨、战士第二 故乡、海疆卫士门、6:00江东体育馆集合准时，过舟山跨海大桥，车赴沈家门半 升洞码头。乘东极轮赴东极镇人民政府所在地庙子湖，将行 </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 费用说明 -->
+                <div class="fy l2">
+                    <div class="title fybt">费用说明</div>
+                    <div class="small">费用包含</div>
+                    <ul class="main baohan">
+                        <li><span class="main_l">交通：</span><span class="main_r">往返旅游巴士；船票。</span></li>
+                        <li><span class="main_l">住宿：</span><span class="main_r">东极岛普通渔家宾馆1晚含早</span></li>
+                        <li><span class="main_l">门票：</span><span class="main_r">行程中所含的景点首道大门票，东极岛船票</span></li>
+                        <li><span class="main_l">导服费：</span><span class="main_r">导服费10元 / 人</span></li>
+                        <li><span class="main_l">导服：</span><span class="main_r">全陪和当地中文导游</span></li>
+                        <li><span class="main_l">儿童价标准：</span><span class="main_r">身高1.2~1.5米(含)，不占床，仅含车费。</span></li>
+                        <li><span class="main_l">赠送：</span><span class="main_r">每人一瓶矿泉水</span></li>
+                    </ul>
+                    <div class="small">费用不含</div>
+                    <ul class="main buhan">
+                        <li><span class="main_l">交通：</span><span class="main_r">往返旅游巴士；船票。</span></li>
+                        <li><span class="main_l">住宿：</span><span class="main_r">东极岛普通渔家宾馆1晚含早</span></li>
+                        <li><span class="main_l">门票：</span><span class="main_r">行程中所含的景点首道大门票，东极岛船票</span></li>
+                        <li><span class="main_l">导服费：</span><span class="main_r">导服费10元 / 人</span></li>
+                        <li><span class="main_l">导服：</span><span class="main_r">全陪和当地中文导游</span></li>
+                        <li><span class="main_l">儿童价标准：</span><span class="main_r">身高1.2~1.5米(含)，不占床，仅含车费。</span></li>
+                        <li><span class="main_l">赠送：</span><span class="main_r">每人一瓶矿泉水</span></li>
+                    </ul>
+                </div>
+                <!-- 用户点评 -->
+                <div class="yh l3">
+                    <div class="yh_title">
+                        <p class="fl yhbt">用户点评</p>
+                        <p class="fr"><span class="fen">9.8</span>分</p>
+                    </div>
+                    <ul class="yh_pinglun">
+                        <li class="item">
+                            <div class="item_title">
+                                <span class="fl db one"><img src="images/youji_logo.png"></span>
+                                <span class="fl db two">
+                                    <p>柳**y </p>
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing xing1" src="images/wujiaoxing1.png">
+                                </span>
+                                <p class="fr db three">1天前</p>
+                            </div>
+                            <div class="item_main">庙子湖岛是东极岛的主岛，也是唯一一个能乘船直达的岛屿， 同时，是电影《后会无期》的主要拍摄地。 这里有奇峰异石、观海垂钓、捕鱼 副本庙子湖岛是东极岛的主岛，也是唯一一个能乘船直达的岛屿， 同时，是电影《后会无期》的主要拍摄地。 这里有奇峰异石、观海垂钓、捕鱼。</div>
+                        </li>
+                        <li class="item">
+                            <div class="item_title">
+                                <span class="fl db one"><img src="images/youji_logo.png"></span>
+                                <span class="fl db two">
+                                    <p>柳**y </p>
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing" src="images/wujiaoxing.png">
+                                    <img class="xing xing1" src="images/wujiaoxing1.png">
+                                </span>
+                                <p class="fr db three">1天前</p>
+                            </div>
+                            <div class="item_main">庙子湖岛是东极岛的主岛，也是唯一一个能乘船直达的岛屿， 同时，是电影《后会无期》的主要拍摄地。 这里有奇峰异石、观海垂钓、捕鱼 副本庙子湖岛是东极岛的主岛，也是唯一一个能乘船直达的岛屿， 同时，是电影《后会无期》的主要拍摄地。 这里有奇峰异石、观海垂钓、捕鱼。</div>
+                        </li>
+                    </ul>
+                    <a class="yh_more db" href="#">查看更多</a>
+                </div>
+            </div>
+        </section>
+        <!-- 猜你喜欢 -->
+        <section class="like minH">
+            <div class="title">
+                <p class="fl">猜你喜欢</p>
+                <a href="#" class="db fr">更多 &gt;&gt;</a>
+            </div>
+            <ul class="main minH">
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 底部 -->
+        <section class="footer">
+            <form>
+                <div class="one fl">
+                    <p class="total">共计</p>
+                    <p class="price">&yen;<b class="num">2323</b></p>
+                </div>
+                <a class="two db fl" href="tel:123494">客服</a>
+                <span class="three db fl"><img class="t_img" src="images/xq_sc.png"><span>收藏</span></span>
+                <a class="now db fr" href="#">立即预定</a>
+            </form>
+        </section>
+        <!-- 返回顶部 -->
+        <section class="return_top"><img src="images/return_top.png"></section>
+    </div>
+</body>
+
+</html>
+<!-- 轮播 -->
+<script>
+$(function() {
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        autoplayDisableOnInteraction: false, //触屏后继续轮播
+        autoplay: 2000 // 轮播时间
+    });
+})
+</script>

@@ -1,0 +1,246 @@
+.wrap {margin-bottom: .9rem;}
+/*适用于手机端：字体大小用rem，1rem=16px；为默认字体大小;最大宽度640*/
+header {
+    height: 2.5rem;
+    width: 6.4rem;
+    background:#fff url(../images/my_logo.png) no-repeat;
+    background-size: 100% 100%;
+}
+.h_l{
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    position: relative;
+}
+.h_l img{
+    width: 50%;
+    margin-top: .2rem;
+}
+.h_l b{
+    height: .2rem;
+    width: .2rem;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:.2rem;
+    right: .2rem;
+    color: transparent;
+    overflow: hidden;
+}
+.h_c{
+    width: 3rem;
+    height: 2rem;
+    margin-left: .7rem;
+    margin-top: .2rem;
+    color: #fff;
+    text-align:center;
+}
+.h_c_logo{
+    height: 1.15rem;
+    width: 1.15rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: .1rem;
+}
+.h_c_login {
+    text-align: center;
+    font-size: .3rem;
+    color: #fff;
+}
+.h_c_login a{
+    color: #fff;
+}
+/* // 订单详情 */
+section.dingdan{
+    min-height: 1rem;
+    width: 6.4rem;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: .1rem;
+    padding-bottom: .1rem;
+}
+.dd_bot{
+    height: 1.08rem;
+    width: 100%;
+}
+.dd_bot a{
+    float: left;
+    width: 25%;
+    height: 100%;
+    color: #a5a5a5;
+    font-size: .24rem;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.8rem;
+    position: relative;
+}
+.dd_bot a.aa1{
+    background: url(../images/my_a1.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa2{
+    background: url(../images/my_a2.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa3{
+    background: url(../images/my_a3.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa4{
+    background: url(../images/my_a4.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa5{
+    background: url(../images/my_b1.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa6{
+    background: url(../images/my_b2.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa7{
+    background: url(../images/my_b3.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa8{
+    background: url(../images/my_b4.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa9{
+    background: url(../images/my_b5.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa10{
+    background: url(../images/my_b6.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa11{
+    background: url(../images/my_b7.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a.aa12{
+    background: url(../images/my_b8.png) no-repeat center .2rem;
+    background-size:auto 40%;
+}
+.dd_bot a b{
+    display: block;
+    position: absolute;
+    top: .1rem;
+    right: .3rem;
+    width: .3rem;
+    height: .3rem;
+    line-height: .3rem;
+    text-align: center;
+    border-radius: 50%;
+    background: #50B245;
+    font-weight: normal;
+    color: #fff;
+    font-size: .19rem;
+}
+.dd_bot a div img{
+    width: 40%;
+}
+.dd_bot a span{
+    display: block;
+    height: .38rem;
+    line-height: .38rem;
+}
+/* // 常用工具 */
+.gongju{
+    height: 3.4rem;
+    width: 6.4rem;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: .1rem;
+} 
+.gj_top{
+    width: 100%;
+    height: .77rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: .32rem;
+    color: #474747;
+    line-height: .77rem;
+    padding-left: .5rem;
+    position: relative;
+    width: 5.9rem;
+}
+.gj_top:after{
+    content: '';
+    position: absolute;
+    top: .25rem;
+    left: .3rem;
+    height: .3rem;
+    width: 3px;
+    background: #50B245;
+}
+.gongju_bot{
+    height: 2.8rem;
+    width: 100%;
+    overflow: hidden;
+    background: tan;
+}
+.gongju .dd_bot a{
+    width: 25%;
+    height: 1.3rem;
+}
+/*看了又看*/
+section.look{
+    width: 100%;
+    min-height: 1rem;
+    overflow: hidden;
+    margin-bottom: .1rem;
+}
+.look .sx{
+    color: #b5b5b5;
+    margin-right: .2rem;
+    padding-left: .5rem;
+    background: url(../images/my_sx.png) no-repeat left; 
+    background-size: auto 50%;
+}
+.look_cont{
+    width: 6.2rem;
+    min-height: 1rem;
+    overflow: hidden;
+    background: #fff;
+    padding: .2rem .1rem;
+}
+.look_cont .item{
+    width: 3rem;
+    height: 3.4rem;
+    border:1px solid #f4f4f4;
+    margin: .2rem .1rem .2rem 0;
+}
+.look_cont .item:nth-child(2n){
+    margin-right: 0;
+}
+.look .item .one{
+    width: 100%;
+    height: 2.2rem;
+    overflow: hidden;
+}
+.look .item .one img{
+    width: 100%;
+    height: 100%;
+}
+.look .item .two{
+    font-size: .24rem;
+    color: #363636;
+    height: .8rem;
+    line-height: .4rem;
+    width: 95%;
+    margin: 0 auto;
+}
+.look .item .price{
+    color: #FF7733;
+    font-size: .2rem;
+    margin-left: .1rem;
+}
+.look .item .price b{
+    font-size: .3rem;
+}
+.look .item .shoucang{
+    height: .3rem;
+    width: .3rem;
+    margin-right: .2rem;
+}

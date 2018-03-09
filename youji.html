@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>游记</title>
+    <link rel="stylesheet" href="css/header-foter.css">
+    <link rel="stylesheet" href="css/youji.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- 控制font-size大小 -->
+    <script src="js/important.js"></script>
+    <script>
+    $(function() {
+        //加载更多
+        $(document).scroll(function() {
+            var aLen = $('.ul .item').length;
+            if (aLen == 14) {
+                $('.more').text('已加载全部内容！')
+            } else {
+                var hh = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+                var ds = parseFloat($(document).height()) - hh;
+                if (ds <= 0) {
+                    $(".ul").append('<li class="item">' +
+                        '<div class="title">' +
+                        '<img src="images/youji_logo.png">' +
+                        '<p class="title_t single">爱旅行的面包</p>' +
+                        '<time class="title_time">1小时前</time>' +
+                        '</div>' +
+                        '<div class="cont">' +
+                        '<div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>' +
+                        '<div class="cont_img">' +
+                        '<img src="images/youji_nav1.png">' +
+                        '<img src="images/youji_nav2.png">' +
+                        '<img src="images/youji_nav3.png">' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="can">' +
+                        '<a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>' +
+                        '<a href="#" class=" canTotal can_zan fr">42</a>' +
+                        '<a href="#" class=" canTotal can_msg fr">682</a>' +
+                        '<a href="#" class=" canTotal can_liulan fr">6842</a>' +
+                        '</div></li>');
+                }
+            }
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a class="fl db first" href="#"><img src="images/left_jiantou1.png"></a>
+            <a class="fl db second" href="#">游记</a>
+            <a class="fr db msg" href="#"><img src="images/fadaj1.png"></a>
+        </header>
+        <!-- 导航 -->
+        <nav>
+            <a href="#" class="fl db first navIndex">热门</a>
+            <a href="#" class="fl db second">最新</a>
+        </nav>
+        <!-- 留言 -->
+        <section class="main">
+            <ul class="ul">
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <!-- 留言标题 -->
+                    <div class="title">
+                        <img src="images/youji_logo.png">
+                        <p class="title_t single">爱旅行的面包</p>
+                        <time class="title_time">1小时前</time>
+                    </div>
+                    <!-- 留言内容 -->
+                    <div class="cont">
+                        <div class="cont_cont">当我视线穿过蒙古国，望向了辽远苍凉的西伯利亚平 原，只想安静的呼吸。</div>
+                        <div class="cont_img">
+                            <img src="images/youji_nav1.png">
+                            <img src="images/youji_nav2.png">
+                            <img src="images/youji_nav3.png">
+                        </div>
+                    </div>
+                    <!-- 留言参数 -->
+                    <div class="can">
+                        <a href="#" class=" canTotal can_add fl single">俄罗斯贝尔加湖畔</a>
+                        <a href="#" class=" canTotal can_zan fr">6842</a>
+                        <a href="#" class=" canTotal can_msg fr">6842</a>
+                        <a href="#" class=" canTotal can_liulan fr">6842</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 显示更多 -->
+        <section class="more">正在为您加载更多产品...</section>
+        <!-- 返回顶部 -->
+        <section class="return_top"><img src="images/return_top.png"></section>
+        <!-- 评论 -->
+        <section class="write"><img src="images/write.png"></section>
+        <!-- 底部 -->
+        <footer>
+            <a href="index.html">
+                <img src="images/home.png">
+                <span>首页</span>
+            </a>
+            <a href="mudidi.html">
+                <img src="images/mudi.png">
+                <span>目的地</span>
+            </a>
+            <a href="youji.html" class="footer_add"><img src="images/add.png"></a>
+            <a href="kefu.html">
+                <img src="images/kefu.png">
+                <span>客服</span>
+            </a>
+            <a href="my.html">
+                <img src="images/my.png">
+                <span>我的</span>
+            </a>
+        </footer>
+    </div>
+</body>
+
+</html>

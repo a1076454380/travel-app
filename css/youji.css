@@ -1,0 +1,160 @@
+/* html的font-size是100px,
+ 所有 1rem就是100px .1rem就是10px */
+.wrap {margin-bottom: .9rem;}
+/*适用于手机端：字体大小用rem，1rem=16px；为默认字体大小;最大宽度640*/
+header{
+    height: .84rem;
+    background: #fff;
+    width: 100%;
+    line-height: .75rem;
+}
+header a.first,
+header a.msg{
+    width: 10%;
+    height: 100%;
+    text-align: center;
+}
+header a img{
+    height: 50%;
+}
+
+header a.second{
+    width:80%;
+    height: 100%;
+    font-size: .36rem;
+    color: #051B28;
+    text-align: center;
+}
+
+
+/*导航*/
+nav{
+    height: .75rem;
+    line-height: .75rem;
+    background: #fff;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid #f8f8f8;
+}
+nav a{
+    height: .5rem;
+    line-height: .5rem;
+    width: 1.5rem;
+    text-align: center;
+    color: #343434;
+    font-size: .25rem;
+    position: relative;
+    font-size: .25rem;
+    color: #343434;
+    border:1px solid #2DBB55;
+    margin-top: .1rem;
+}
+
+nav a.first{
+    margin-left: 1.6rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+nav a.second{
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+nav a.navIndex{
+    color: #fff;
+    background: #2DBB55;
+}
+
+
+/*留言*/
+section.main{
+    width: 100%;
+    min-height: 1rem;
+    overflow: hidden;
+    background: #F0F4FB;
+    padding-bottom: .1rem;
+}
+.item{
+    width: 6rem;
+    padding: .2rem;
+    min-height: 1rem;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: .1rem;
+}
+
+/*留言标题*/
+.item .title{
+    height: .7rem;
+    width: 100%;
+    overflow: hidden;
+}
+.item .title img{
+    height: .7rem;
+    width: .7rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: .2rem;
+}
+
+.item .title_t{
+    font-size: .27rem;
+    color: #000;
+}
+.item .title_time{
+    font-size: .24rem;
+    color: #999;
+}
+/*留言内容*/
+.item .cont{
+    width: 100%;
+    min-height: 1rem;
+    overflow: hidden;
+    margin: .1rem auto;
+}
+.item .cont_cont{
+    color: #343434;
+    font-size: .3rem;
+    line-height: .4rem;
+}
+.item .cont_img img{
+    width: 1.9rem;
+    height: 1.9rem;
+    float: left;
+    margin-top: .1rem;
+    margin-right: .1rem;
+}
+.item .cont_img img:nth-child(3n){
+    margin-right: 0;
+}
+
+/*留言参数*/
+.item .can{
+    height: .5rem;
+    width:100%;
+    line-height: .5rem;
+    font-size: .22rem;
+}
+.item .can .canTotal{
+    padding-left: .33rem;
+    margin-right: .2rem;
+    color: #272536;
+}
+
+.item .can .can_add{
+    color: #999;
+    background: url(../images/map.png) no-repeat left center;
+    background-size: auto 70%;
+    width: 2rem;
+}
+.item .can_liulan{
+    background: url(../images/youji_into.png) no-repeat left center;
+    background-size: auto 50%;
+}
+.item .can_msg{
+    background: url(../images/youji_msg.png) no-repeat left center;
+    background-size: auto 50%;
+}
+.item .can_zan{
+    background: url(../images/youji_zan.png) no-repeat left center;
+    background-size: auto 50%;
+}

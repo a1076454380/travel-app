@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/header-foter.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-3.4.1.min.js"></script>
+    <!-- 控制font-size大小 -->
+    <script src="js/important.js"></script>
+    <script>
+    $(function() {
+        //加载更多
+        $(document).scroll(function() {
+            var aLen = $('.main_item').length;
+            if (aLen == 14) {
+                $('.more').text('已加载全部内容！')
+            } else {
+                var hh = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+                var ds = parseFloat($(document).height()) - hh;
+                if (ds <= 0) {
+                    $(".tuan").append('<li class="main_item minH">' +
+                        '<a class="bzt db" href="#">标准团</a>' +
+                        '<a class="logo db" href="#"><img src="images/mdd_nav3.png"></a>' +
+                        '<span class="price db">&yen;<b class="num">2342</b> 起</span>' +
+                        '<h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>' +
+                        '<p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>' +
+                        '<div class="one minH">' +
+                        '<span class="one_a color1">下单立减</span>' +
+                        '<span class="one_a color2">酒店可选</span>' +
+                        '<a class="tiao" href="#">上航假期</a>' +
+                        '</div>' +
+                        '</li>');
+                }
+            }
+        })
+    })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header">
+                <a class="db fl address" href="#">徐州</a>
+                <div class="input fl">
+                    <input type="text" name="text" class="text" placeholder="目的地/关键词">
+                    <a class="db sao" href="#"></a>
+                </div>
+                <a class="db fr msg" href="#"><b>1</b></a>
+                <a class="db fr phone" href="tel:124234"></a>
+            </div>
+        </header>
+        <!-- 轮播 -->
+        <section class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="liebiao.html"><img src="images/liebiao_nav1.png"></a></div>
+                    <div class="swiper-slide"><a href="liebiao.html"><img src="images/liebiao_nav2.png"></a></div>
+                    <div class="swiper-slide"><a href="liebiao.html"><img src="images/xq_logo.png"></a></div>
+                </div>
+                <div class="swiper-pagination" style="text-align: right;"></div>
+            </div>
+        </section>
+        <!-- 导航 -->
+        <ul class="nav minH">
+            <li class="fl"><a class="db zby" href="#">周边游</a></li>
+            <li class="fl"><a class="db gny" href="#">国内游</a></li>
+            <li class="fl"><a class="db cjy" href="#">出境游</a></li>
+            <li class="fl"><a class="db zty" href="#">主题游</a></li>
+            <li class="fl"><a class="db mp" href="#">门票</a></li>
+            <li class="fl"><a class="db dz" href="#">订制</a></li>
+            <li class="fl"><a class="db ppkj" href="#">品牌空间</a></li>
+            <li class="fl"><a class="db qb" href="#">全部</a></li>
+        </ul>
+        <!-- 热门 -->
+        <section class="hot minH">
+            <a href="#" class="db hot_a single"><span class="one">热门景点</span>海上过中秋，精彩“邮”你！</a>
+            <a href="#" class="db hot_a single"><span class="one">热门游记</span>#带着挖财去旅行#在贝加尔湖冻结的美好时光！</a>
+            <p class="hot_b">热</p>
+        </section>
+        <!-- 每日推荐 -->
+        <section class="like minH">
+            <div class="title">
+                <p class="fl">每日推荐</p>
+                <a href="#" class="db fr">更多 &gt;&gt;</a>
+            </div>
+            <ul class="main minH">
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+                <li class="item fl">
+                    <a href="#" class="logo db"><img src="images/mdd_nav1.png"></a>
+                    <p class="name single">见你未见过的巴黎</p>
+                    <div class="item_di minH">
+                        <span class="fl address">法国</span>
+                        <time class="fr time">9.18-9.20</time>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 广告 -->
+        <a href="#" class="db guanggao"><img src="images/banner.png"></a>
+        <!-- 猜你喜欢 -->
+        <nav class="guess minH">
+            <ul class="guess_a">
+                <li><a href="#" class="lIndex">猜你喜欢</a></li>
+                <li><a href="#">周边游</a></li>
+                <li><a href="#">国内游</a></li>
+                <li><a href="#">出境游</a></li>
+            </ul>
+            <ul class="guess_b">
+                <li><a href="#" class="aIndex">全部</a></li>
+                <li><a href="#">心动迪士尼</a></li>
+                <li><a href="#">踏青赏花</a></li>
+                <li><a href="#">趣玩海岛游</a></li>
+                <li><a href="#">温泉养生</a></li>
+                <li><a href="#">放价日泰</a></li>
+                <li><a href="#">欧美澳新</a></li>
+                <li><a href="#">省心邮轮季</a></li>
+            </ul>
+        </nav>
+        <!-- 跟团旅游列表 -->
+        <ul class="tuan minH">
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav4.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav2.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav3.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav4.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav5.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav1.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+            <li class="main_item minH">
+                <a class="bzt db" href="liebiao.html">标准团</a>
+                <a class="logo db" href="liebiao.html"><img src="images/mdd_nav2.png"></a>
+                <span class="price db">&yen;<b class="num">2342</b> 起</span>
+                <h1 class="title single">[国庆]海南三亚龙湾-蜈支洲6日游</h1>
+                <p class="cont single">全程连住国际五星温德姆/万豪/洲际品牌，万人出游0购物，1...</p>
+                <div class="one minH">
+                    <span class="one_a color1">下单立减</span>
+                    <span class="one_a color2">酒店可选</span>
+                    <a class="tiao" href="liebiao.html">上航假期</a>
+                </div>
+            </li>
+        </ul>
+        <!-- 显示更多 -->
+        <section class="more">正在为您加载更多产品...</section>
+        <!-- 返回顶部 -->
+        <section class="return_top"><img src="images/return_top.png"></section>
+        <!-- 底部 -->
+        <footer>
+            <a href="index.html" class="index">
+                <img src="images/home1.png">
+                <span>首页</span>
+            </a>
+            <a href="mudidi.html">
+                <img src="images/mudi.png">
+                <span>目的地</span>
+            </a>
+            <a href="youji.html" class="footer_add"><img src="images/add.png"></a>
+            <a href="kefu.html">
+                <img src="images/kefu.png">
+                <span>客服</span>
+            </a>
+            <a href="my.html">
+                <img src="images/my.png">
+                <span>我的</span>
+            </a>
+        </footer>
+    </div>
+</body>
+<!-- 轮播 -->
+<script>
+$(function() {
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        autoplayDisableOnInteraction: false, //触屏后继续轮播
+        autoplay: 2000 // 轮播时间
+    });
+})
+</script>
+
+</html>
